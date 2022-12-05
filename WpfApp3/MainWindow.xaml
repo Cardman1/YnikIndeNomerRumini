@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock x:Name="Familia" HorizontalAlignment="Left" Height="20">Фамилия</TextBlock>
+            <TextBox x:Name="VvodFamilia" HorizontalAlignment="Left" Height="15" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <GroupBox Header="Пол"  BorderBrush="Black" BorderThickness="1"  >
+            <StackPanel>
+                <RadioButton x:Name="Mujchina" Content="Мужчина" Checked="RadioButton_Checked"/>
+                <RadioButton x:Name="Jenshina" Content="Женщина" />
+            </StackPanel>
+        </GroupBox>
+        <Label x:Name="ViborDate" Content="Выберите дату рождения:" />
+        <DatePicker HorizontalAlignment="Left" />
+        <GroupBox  BorderBrush="Black" BorderThickness="1">
+            <StackPanel>
+                <Label x:Name="ViReDentRym" Content="Вы резидент Румынии?" />
+                <RadioButton x:Name="OtvetDa" Content="Да" />
+            <RadioButton x:Name="OtvetNet" Content="Нет" />
+            </StackPanel>
+        </GroupBox>
+        <Label x:Name="VashGorod" Content="Ваш город:" />
+        <ComboBox x:Name="Goroda">
+            <ComboBoxItem Content="2321"/>
+        </ComboBox>
+        <Button x:Name="SgenerCNP" Content="Сгенирировать CNP" Click="Button_Click"/>
+        
+    </StackPanel>
+</Window>
